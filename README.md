@@ -6,6 +6,10 @@ This contain systems haveing a fixed functionality</br>
 [Raspberry](https://github.com/The-Kriz/Embedded_systems/tree/main#raspberry-pi): pi, pico, picoW </br>
 [Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other)           : PRIZM, NodeMCU(Esp8226,Esp32)</br>
 
+***Code:***
+**Micropython**,
+**C/C++**
+
 ## Arduino
 Arduino is an open-source platform for creating electronic projects,
 consisting of both hardware and software components.</br>
