@@ -1,11 +1,10 @@
 # Embedded_systems
 This contain systems haveing a fixed functionality</br>
-<p>
-Boards Used :</br>
-            Arduino : Uno, Mega, Nano, Micro, Leonardo</br>
-              Raspberry pi, pico, picoW </br>
-              Other : PRIZM, NodeMCU(Esp8226,Esp32)</br>
-</p>
+
+***Boards Used*** :                       
+[Arduino](https://github.com/The-Kriz/Embedded_systems/tree/main#Arduino)       : Uno, Mega, Nano, Micro, Leonardo</br>
+[Raspberry](https://github.com/The-Kriz/Embedded_systems/tree/main#raspberry-pi): pi, pico, picoW </br>
+[Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other)           : PRIZM, NodeMCU(Esp8226,Esp32)</br>
 
 ## Arduino
 Arduino is an open-source platform for creating electronic projects,
