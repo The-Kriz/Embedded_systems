@@ -4,7 +4,7 @@ This contain systems haveing a fixed functionality</br>
 ***Boards Used*** :                       
 [Arduino](https://github.com/The-Kriz/Embedded_systems/tree/main#Arduino)       : Uno, Mega, Nano, Micro, Leonardo</br>
 [Raspberry](https://github.com/The-Kriz/Embedded_systems/tree/main#raspberry-pi): pi, pico, picoW </br>
-[Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other)           : PRIZM,Seeed, NodeMCU(Esp8226,Esp32)</br>
+[Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other)           : PRIZM, Seeed, NodeMCU(Esp8226,Esp32)</br>
 
 ***Code:***
 **Micropython**,
