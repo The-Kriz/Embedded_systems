@@ -42,6 +42,12 @@ Raspberry Pi Pico is a microcontroller board released by Raspberry Pi in 2021. I
 ### Raspberry Pi PicoW:
 Raspberry Pi Pico W is a variant of the Pico that was released in 2021. The Pico W adds wireless connectivity to the Pico with the addition of a Cypress CYW43455 Wi-Fi and Bluetooth module. Like the Pico, the Pico W is a versatile microcontroller board that can be used for a wide range of projects, but with the added convenience of wireless connectivity.
 
+## PJRC Teensy
+PJRC Teensy is a line of powerful and flexible development boards designed for creating electronic projects. Developed by PJRC, these boards are known for their small form factor and impressive capabilities. Teensy boards are equipped with various input/output pins, making them suitable for a wide range of applications, from simple sensor-based projects to complex interactive installations. They are compatible with the Arduino IDE, allowing developers to program them using the familiar Arduino language and libraries. With their high-performance microcontrollers, Teensy boards are a popular choice for DIY enthusiasts, makers, and professionals seeking a versatile and reliable platform to bring their electronic ideas to life.
+
+### Teensy 4.1:
+Teensy 4.1 is a high-performance development board designed for advanced projects. It features a powerful 600 MHz ARM Cortex-M7 processor, providing a significant boost in processing capabilities compared to other Arduino boards. With 34 digital input/output pins, 18 analog inputs, and multiple hardware serial ports, Teensy 4.1 is well-suited for complex and data-intensive applications. Its small size makes it ideal for space-constrained projects, while its compatibility with the Arduino IDE allows developers to use familiar programming tools and libraries. Teensy 4.1 is the go-to choice for those seeking a fast and capable microcontroller board for demanding projects.
+
 ## Other
 Here are some other microcontroller boards 
 
