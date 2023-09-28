@@ -30,11 +30,10 @@
 
 
 // Configure the motor driver.
-CytronMD motor1(PWM_DIR, 12, 11);
-CytronMD motor2(PWM_DIR, 9, 10);
-CytronMD motor3(PWM_DIR, 8, 7);
-CytronMD motor4(PWM_DIR, 5, 6);
-
+CytronMD motor1(PWM_DIR, 8, 7);   // PWM 1A = Pin 3, PWM 1B = Pin 9.
+CytronMD motor2(PWM_DIR, 5, 6); // PWM 2A = Pin 10, PWM 2B = Pin 11.
+CytronMD motor3(PWM_DIR, 12, 11);   // PWM 1A = Pin 3, PWM 1B = Pin 9.
+CytronMD motor4(PWM_DIR, 9, 10); // PWM 2A = Pin 10, PWM 2B = Pin 11.
 
 int new_angle;
 int move_value = 0;
@@ -105,48 +104,62 @@ void Stop() {
 }
 // The loop routine runs over and over again forever.
 void loop() {
-  //      motor1.setSpeed(100);     // Motor 1 stops.
-  //      motor2.setSpeed(100);     // Motor 2 stops.
-  //      motor3.setSpeed(100);     // Motor 1 stops.
-  //      motor4.setSpeed(100);     // Motor 2 stops.
-  for (int i = 50; i < 200; i++)
-  {
-    motor1.setSpeed(i);     // Motor 1 stops.
-    motor2.setSpeed(-i);     // Motor 2 stops.
-    motor3.setSpeed(-i);     // Motor 1 stops.
-    motor4.setSpeed(i);     // Motor 2 stops.
-    delay(5);
 
-  }
-  for (int i = 200; i > 50; i--)
-  {
-    motor1.setSpeed(i);     // Motor 1 stops.
-    motor2.setSpeed(-i);     // Motor 2 stops.
-    motor3.setSpeed(-i);     // Motor 1 stops.
-    motor4.setSpeed(i);     // Motor 2 stops.
-    delay(5);
-  }
-  delay(1000);
-  for (int i = 50; i < 200; i++)
-  {
-    motor1.setSpeed(-i);     // Motor 1 stops.
-    motor2.setSpeed(i);     // Motor 2 stops.
-    motor3.setSpeed(i);     // Motor 1 stops.
-    motor4.setSpeed(-i);     // Motor 2 stops.
-    delay(5);
-  }
-  for (int i = 200; i > 50; i--)
-  {
-    motor1.setSpeed(-i);     // Motor 1 stops.
-    motor2.setSpeed(i);     // Motor 2 stops.
-    motor3.setSpeed(i);     // Motor 1 stops.
-    motor4.setSpeed(-i);     // Motor 2 stops.
-    delay(5);
-  }
-  Stop();
-  while (true)
-  {
-    delay(1000);
+//  motor1.setSpeed(100);     // Motor 1 stops.
+//  motor2.setSpeed(100);     // Motor 2 stops.
+//  motor3.setSpeed(100);     // Motor 1 stops.
+//  motor4.setSpeed(100);     // Motor 2 stops.
 
-  }
+ if (Serial4.available())
+ {
+   char s = Serial4.read();
+   if (s == 'M')
+   {
+     move_array[0] = Serial4.read();
+     move_array[1] = Serial4.read();
+     move_array[2] = Serial4.read();
+   }
+   if (s == 'T')
+   {
+     turn_array[0] = Serial4.read();
+     turn_array[1] = Serial4.read();
+     turn_array[2] = Serial4.read();
+   }
+ }
+ value_m = String(move_array[0]) + String(move_array[1]) + String(move_array[2]);
+ value_t = String(turn_array[0]) + String(turn_array[1]) + String(turn_array[2]);
+ move_value = value_m.toInt();
+ new_angle = value_t.toInt();
+
+ if (move_value and new_angle == 000)
+ {
+   motor1.setSpeed(move_value);
+   motor2.setSpeed(move_value);
+   motor3.setSpeed(move_value);
+   motor4.setSpeed(move_value);
+ }
+ else if (new_angle != 000)
+ {
+   if (new_angle > 0)
+   {
+     motor1.setSpeed(-new_angle);
+     motor2.setSpeed(new_angle);
+     motor3.setSpeed(new_angle);
+     motor4.setSpeed(-new_angle);
+   }
+   else
+   {
+     motor1.setSpeed(new_angle);
+     motor2.setSpeed(-new_angle);
+     motor3.setSpeed(-new_angle);
+     motor4.setSpeed(new_angle);
+   }
+ }
+ else
+ {
+   motor1.setSpeed(0);
+   motor2.setSpeed(0);
+   motor3.setSpeed(0);
+   motor4.setSpeed(0);
+ }
 }
