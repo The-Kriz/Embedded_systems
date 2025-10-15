@@ -2,10 +2,12 @@
 This contain systems haveing a fixed functionality</br>
 
 ***Boards Used*** :                       
-[Arduino](https://github.com/The-Kriz/Embedded_systems/tree/main#Arduino)       : Uno, Mega, Nano, Micro, Leonardo</br>
-[Raspberry](https://github.com/The-Kriz/Embedded_systems/tree/main#raspberry-pi): pi, pico, picoW </br>
-[PJRC Teensy](https://github.com/The-Kriz/Embedded_systems/tree/main#pjrc-teensy): Teensy 4.0, Teensy 4.1 </br>
-[Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other)           : PRIZM, Seeed, NodeMCU(Esp8226,Esp32)</br>
+[Arduino](https://github.com/The-Kriz/Embedded_systems/tree/main#Arduino) : Uno, Mega, Nano, Micro, Leonardo</br>
+[Raspberry](https://github.com/The-Kriz/Embedded_systems/tree/main#raspberry-pi) : pi, pico, picoW </br>
+[PJRC Teensy](https://github.com/The-Kriz/Embedded_systems/tree/main#pjrc-teensy) : Teensy 4.0, Teensy 4.1 </br>
+NXP : S32K144,S32K146,S32K148 </br>
+STM32 : STM32F401,STM32F411,STM32L552RET </br>
+[Other](https://github.com/The-Kriz/Embedded_systems/tree/main#other) : Seeed, NodeMCU(Esp8226,Esp32xx )</br>
 
 ***Code:***
 **Micropython**,
